@@ -100,6 +100,17 @@ input {
 /*****
 Graph colors *****/
 
+text.wm-squiglink-address {
+    color: var(--font-color-primary);
+    color: magenta;
+    font-family: var(--font-primary);
+    font-weight: 700;
+    font-size: 14px;
+    
+    filter: var(--svg-filter);
+}
+
+
 svg text {
     color: var(--background-color-contrast-more);
     color: var(--font-color-primary);

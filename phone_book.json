@@ -4,13 +4,22 @@
     "phones": [
       {
         "name": "DT200",
-        "file": "AudioSense DT200",
-        "suffix": ["(Some Suffix To Add Here)"],
+        "file": ["AudioSense DT200", "AudioSense DT200 2"],
+        "suffix": ["(Suffix 1)", "(Suffix 2)"],
+        "reviewScore": "0",
+        "reviewLink": "",
+        "price": "",
+        "shopLink": ""
+      },
+      {
+        "name": "DT200 no suffix",
+        "file": "AudioSense DT200 2",
         "reviewScore": "0",
         "reviewLink": "",
         "price": "",
         "shopLink": ""
       }
+      
     ]
   }
 ]
