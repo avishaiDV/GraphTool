@@ -13,9 +13,9 @@ const init_phones = ["IEF Neutral Target"],                             // Optio
       alt_tutorial = true,                          // Display a configurable frequency response guide below the graph
       site_url = '/',                               // URL of your graph "homepage"
       share_url = true,                             // If true, enables shareable URLs
-      watermark_text = "HarutoHiroki",              // Optional. Watermark appears behind graphs
+      watermark_text = "",              // Optional. Watermark appears behind graphs
       watermark_image_url = "assets/images/haruto.svg",   // Optional. If image file is in same directory as config, can be just the filename
-      page_title = "HarutoHiroki",                  // Optional. Appended to the page title if share URLs are enabled
+      page_title = "",                  // Optional. Appended to the page title if share URLs are enabled
       page_description = "View and compare frequency response graphs for headphones.",
       accessories = true,                           // If true, displays specified HTML at the bottom of the page. Configure further below
       externalLinksBar = true,                      // If true, displays row of pill-shaped links at the bottom of the page. Configure further below
@@ -102,7 +102,7 @@ function watermark(svg) {
         .attr("opacity",0.2)
         .append("text")
         .attrs({x:765, y:314, "font-size":10, "text-anchor":"end", "class":"site_name"})
-        .text("graphtool.harutohiroki.com");
+        .text("graphtool.Avishai.com");
 }
 
 
@@ -146,7 +146,7 @@ setLayout();
 const 
     // Short text, center-aligned, useful for a little side info, credits, links to measurement setup, etc. 
     simpleAbout = `
-        <p class="center">This graph database is maintained by HarutoHiroki with frequency responses generated via an "IEC60318-4"-compliant ear simulator. This web software is based on a heavily modified version of the <a href="https://github.com/mlochbaum/CrinGraph">CrinGraph</a> open source software project, with <a href="https://www.teachmeaudio.com/mixing/techniques/audio-spectrum">Audio Spectrum</a>'s definition source.</p>
+        <p class="center">This graph database is maintained by Avishai with frequency responses generated via an "IEC60318-4"-compliant ear simulator. This web software is based on a heavily modified version of the <a href="https://github.com/mlochbaum/CrinGraph">CrinGraph</a> open source software project, with <a href="https://www.teachmeaudio.com/mixing/techniques/audio-spectrum">Audio Spectrum</a>'s definition source.</p>
     `;
     // Which of the above variables to actually insert into the page
     // If you are using custom accessories, you may need to change loadTranslations() in translate.js to utilize custom accessories
@@ -247,12 +247,12 @@ setupGraphAnalytics();
 
 
 // If alt_header is enabled, these are the items added to the header
-let headerLogoText = "HarutoHiroki",
+let headerLogoText = "Avishai",
     headerLogoImgUrl = "assets/images/haruto.svg",
     headerLinks = [
     {
         name: "Home",
-        url: "https://harutohiroki.com"
+        url: "https://Avishai.com"
     },
     {
         name: "Ranking",
@@ -260,15 +260,15 @@ let headerLogoText = "HarutoHiroki",
     },
     {
         name: "Discord",
-        url: "https://discord.harutohiroki.com"
+        url: "https://discord.Avishai.com"
     },
 //  {
 //      name: "Donate",
-//      url: "https://ko-fi.com/harutohiroki"
+//      url: "https://ko-fi.com/Avishai"
 //  },
     {
         name: "GitHub",
-        url: "https://github.com/HarutoHiroki"
+        url: "https://github.com/Avishai"
     },
 ];
 let whichHeaderLogoTextToUse = headerLogoText;

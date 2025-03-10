@@ -1,0 +1,131 @@
+{
+    "header": {
+      "logoText": "אבישי",
+      "links": []
+    },
+    "tutorial": [
+      {
+        "name": "סאב בס",
+        "description": "הרעש הנמוך, בדרך כלל מחוץ לטווח השמיעה של בני אדם, נוטה להיות מורגש יותר מאשר נשמע, ומספק תחושת עוצמה."
+      },
+      {
+        "name": "בס",
+        "description": "קובע עד כמה הצליל \"שמן\" או \"דק\", הגברה סביב 250Hz נוטה להוסיף תחושת חמימות. אם אתה חובב בס, כנראה שאתה אוהב את התחום הזה."
+      },
+      {
+        "name": "אמצעים נמוכים",
+        "description": "ההרמוניות הנמוכות של רוב הכלים, נתפס בדרך כלל כאזור הנוכחות של הבס. הגברה סביב 300Hz מוסיפה בהירות לבס ולכלי מיתר נמוכים. יותר מדי הגברה סביב 500Hz עלולה לגרום לכלים בתדרים גבוהים להישמע עמומים."
+      },
+      {
+        "name": "אמצעים",
+        "description": "הטווח האמצעי קובע עד כמה הכלי בולט במיקס. הגברה סביב 1000Hz יכולה לתת לכלים איכות המזכירה צליל של קרן. עודף בתדר הזה עלול להישמע צורם ולגרום לעייפות שמיעה."
+      },
+      {
+        "name": "אמצעים גבוהים",
+        "description": "הטווח האמצעי-גבוה אחראי על האפקטיביות של כלים קצביים והתקפיים. הגברה בטווח הזה יכולה להוסיף נוכחות, אך יותר מדי הגברה באזור 3kHz עלולה לגרום לעייפות שמיעה."
+      },
+      {
+        "name": "נוכחות",
+        "description": "תחום הנוכחות אחראי על הבהירות וההגדרה של הצליל. הגברה מופרזת עלולה לגרום לצליל צורם ומעצבן, ואילו חיתוך בתחום הזה הופך את הצליל לרחוק ושקוף יותר."
+      },
+      {
+        "name": "טרבל",
+        "description": "תחום הטרבל מורכב כולו מהרמוניות ואחראי על הניצוץ והאוויריות של הצליל. הגברה מופרזת באזור הזה יכולה להדגיש רעש רקע ולגרום לעייפות שמיעה."
+      }
+    ],
+    "accessories": {
+      "content": "<p class=\"center\">מסד הנתונים הגרפי הזה מתוחזק על ידי אבישי עם תגובות תדרים שנוצרו באמצעות סימולטור אוזן התואם לתקן \"IEC60318-4\". תוכנת האינטרנט הזו מבוססת על גרסה מותאמת אישית של פרויקט הקוד הפתוח <a href=\"https://github.com/mlochbaum/CrinGraph\">CrinGraph</a>, שעבר התאמה על ידי HarutoHiroki, עם מקור ההגדרה של <a href=\"https://www.teachmeaudio.com/mixing/techniques/audio-spectrum\">Audio Spectrum</a>.</p>"
+    },
+    "targets": {
+      "Reference": "ייחוס",
+      "Neutral": "נייטרלי",
+      "Reviewer": "סוקר",
+      "Community": "קהילה",
+      "Preference": "העדפה",
+      "TARGETS": "יעדים"
+    },
+    "main": {
+      "pin": "נעיצה",
+      "selectBrands": "מותגים",
+      "selectModels": "דגמים",
+      "selectEqualizer": "אקולייזר",
+      "searchBar": "חיפוש",
+      "copyUrl": "העתקת קישור",
+      "screenshot": "צילום מסך",
+      "averageAll": "ממוצע הכול",
+      "yAxisScale": "קנה מידה לציר Y:",
+      "zoom": "התקרבות:",
+      "bass": "בס",
+      "mids": "אמצעים",
+      "treble": "טרבל",
+      "normalize": "נרמול:",
+      "smooth": "החלקה:",
+      "inspect": "בדיקה",
+      "label": "תווית",
+      "recolor": "שינוי צבע",
+      "darkmode": "מצב כהה",
+      "preferenceAdjustments": "התאמות העדפה:",
+      "tiltUnit": "שיפוע (dB/Oct)",
+      "bassUnit": "בס (dB)",
+      "trebleUnit": "טרבל (dB)",
+      "earGainUnit": "הגבר אוזן (dB)",
+      "removeAdjustments": "הסרת התאמות",
+      "harmanFilters": "פילטרי הרמן",
+      "preferenceBounds": "גבולות העדפה",
+      "addHelp": "(או לחיצה עם כפתור אמצעי/ctrl בעת הבחירה; או הצמדת IEMs אחרים)",
+      "lock": "נעילה",
+      "selectModelAlert": "בחר דגם כדי להציג את תגובת התדרים שלו",
+      "mobileHelper": "דפדף בכל הגרפים",
+      "uploading": "מעלה...",
+      "uploadFR": "העלאת תגובת תדרים",
+      "uploadTarget": "העלאת יעד",
+      "uploadSong": "העלאת שיר",
+      "uploadWarning": "הנתונים שהועלו לא יישמרו באופן קבוע",
+      "parametricEqualizer": "אקולייזר פרמטרי",
+      "chooseEQModel": "בחר דגם אקולייזר",
+      "preamp": "קדם-מגבר",
+      "type": "סוג",
+      "frequency": "תדר",
+      "gain": "הגברה",
+      "q": "Q",
+      "add": "+",
+      "remove": "-",
+      "sort": "מיון",
+      "disable": "השבתה",
+      "saveEQ": "שמור אקולייזר",
+      "autoEqFrequencyRange": "טווח תדרים",
+      "autoEqGainRange": "טווח הגברה",
+      "autoEqQRange": "טווח Q",
+      "autoEQ": "אקולייזר אוטומטי",
+      "readme": "קובץ מידע",
+      "eqDemo": "הדגמת אקולייזר",
+      "pinkNoise": "רעש ורוד",
+      "scarletFire": "Scarlet Fire",
+      "toneGenerator": "מחולל טונים",
+      "uploaded": "הועלה",
+      "toneGeneratorRange": "טווח מחולל טונים",
+      "freq": "תדר",
+      "miscellaneous": "שונות",
+      "left": "שמאל",
+      "channelBalance": "איזון ערוצים",
+      "right": "ימין",
+      "importEQ": "ייבוא אקולייזר",
+      "exportParametricEQ": "ייצוא אקולייזר פרמטרי",
+      "exportGraphicEQ": "ייצוא אקולייזר גרפי (Wavelet)",
+      "autoEQRunning": "אקולייזר אוטומטי פועל, זה עשוי לקחת 5-20 שניות או יותר."
+    },
+    "alertMessages": {
+      "headphoneNotFound": "האוזניות לא נמצאו!",
+      "boundsNotFound": "גבולות לא נמצאו!",
+      "customTiltNotSupported": "היעד הזה לא נתמך עבור שיפוע מותאם אישית",
+      "parseFRFailed": "שגיאה בפענוח קובץ תגובת התדרים: פורמט לא תקין.",
+      "targetAlreadyExists": "היעד הזה כבר קיים בכלי הזה, אנא בחר אותו במקום להעלות מחדש.",
+      "noFiltersSelectedForSave": "בחר דגם והוסף לפחות מסנן אחד לפני השמירה.",
+      "parseFiltersFailed": "שגיאה בפענוח קובץ המסננים: לא נמצא אף מסנן.",
+      "noFiltersSelectedForExport": "הוסף לפחות מסנן אחד לפני הייצוא.",
+      "autoEQFilterAlert": "בחר דגם ויעד, אם אין יעדים ורואים מספר דגמים, השני ייבחר כברירת מחדל.",
+      "webAudioNotSupported": "API השמע מושבת, אנא הפעל אותו אם ברצונך להשתמש בפונקציות בדיקות אקולייזר.",
+      "noAudioUploaded": "אנא העלה קובץ שמע תחילה."
+    }
+  }
+  

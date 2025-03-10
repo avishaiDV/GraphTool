@@ -2089,6 +2089,7 @@ function showPhone(p, exclusive, suppressVariant, trigger) {
     if (extraEnabled && extraEQEnabled) {
         updateEQPhoneSelect();
     }
+    if (!p.isTarget && alt_augment ) { augmentList(p); }
 }
 
 function removeCopies(p) {
@@ -2166,6 +2167,12 @@ function asPhoneObj(b, p, isInit, inits) {
     }
     r.dispName = r.dispName || r.phone;
     r.fullName = r.dispBrand + " " + r.phone;
+    if (alt_augment) {
+        r.reviewScore = p.reviewScore;
+        r.reviewLink = p.reviewLink;
+        r.shopLink = p.shopLink;
+        r.price = p.price;
+    }
     return r;
 }
 
@@ -3057,7 +3064,7 @@ function addExtra() {
             phoneObjs.push(phoneObj);
             allPhones.push(phoneObj);
         }
-        updatePhoneSelect();
+        window.updatePhoneSelect();
         return phoneObj;
     };
     fileFR.addEventListener("change", (e) => {
@@ -3859,7 +3866,7 @@ function addHeader() {
 
     if (allowCreatorSupport) {
         // custom Ko-fi button
-        const scriptHtml = `<a href='https://ko-fi.com/harutohiroki' target='_blank' style="margin-right: 10px"><img height='333' style='border:0px; height:33px;'
+        const scriptHtml = `<a href='https://ko-fi.com/Avishai' target='_blank' style="margin-right: 10px"><img height='333' style='border:0px; height:33px;'
                             src='https://storage.ko-fi.com/cdn/kofi5.png?v=3' border='0' alt='Buy Me a Coffee at ko-fi.com' /></a>`;
         altHeaderElem.insertAdjacentHTML('beforeend', scriptHtml);
     }

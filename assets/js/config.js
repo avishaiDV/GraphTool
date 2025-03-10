@@ -1,5 +1,7 @@
 // Configuration options
-const init_phones = ["Haruto 2024 Target", "AudioSense DT200"],// Optional. Which graphs to display on initial load. Note: Share URLs will override this set
+const init_phones = [
+    "Myer Audio Sliivo SL41 MK2"
+],// Optional. Which graphs to display on initial load. Note: Share URLs will override this set
       DIR = "data/",                                // Directory where graph files are stored
       default_channels = ["L","R"],                 // Which channels to display. Avoid javascript errors if loading just one channel per phone
       default_normalization = "dB",                 // Sets default graph normalization mode. Accepts "dB" or "Hz"
@@ -13,33 +15,44 @@ const init_phones = ["Haruto 2024 Target", "AudioSense DT200"],// Optional. Whic
       alt_tutorial = true,                          // Display a configurable frequency response guide below the graph
       site_url = '/',                               // URL of your graph "homepage"
       share_url = true,                             // If true, enables shareable URLs
-      watermark_text = "HarutoHiroki",              // Optional. Watermark appears behind graphs
-      watermark_image_url = "assets/images/haruto.svg", // Optional. If image file is in same directory as config, can be just the filename
-      page_title = "HarutoHiroki",                  // Optional. Appended to the page title if share URLs are enabled
+      watermark_text = "",              // Optional. Watermark appears behind graphs
+      watermark_image_url = "assets/images/my_logo.svg", // Optional. If image file is in same directory as config, can be just the filename
+      page_title = "avishai's squig.link",                  // Optional. Appended to the page title if share URLs are enabled
+      rig_description = "clone IEC 711", // Optional. Labels the graph with a description of the rig used to make the measurement, e.g. "clone IEC 711"
       page_description = "View and compare frequency response graphs for earphones",
       accessories = true,                           // If true, displays specified HTML at the bottom of the page. Configure further below
       externalLinksBar = true,                      // If true, displays row of pill-shaped links at the bottom of the page. Configure further below
       expandable = false,                           // Enables button to expand iframe over the top of the parent page
       expandableOnly = false,                       // Prevents iframe interactions unless the user has expanded it. Accepts "true" or "false" OR a pixel value; if pixel value, that is used as the maximum width at which expandableOnly is used
       headerHeight = '0px',                         // Optional. If expandable=true, determines how much space to leave for the parent page header
-      darkModeButton = true,                        // Adds a "Dark Mode" button the main toolbar to let users set preference
+      darkModeButton = false,                        // Adds a "Dark Mode" button the main toolbar to let users set preference
       targetDashed = true,                          // If true, makes target curves dashed lines
       targetColorCustom = false,                    // If false, targets appear as a random gray value. Can replace with a fixed color value to make all targets the specified color, e.g. "black"
       labelsPosition = "bottom-left",               // Up to four labels will be grouped in a specified corner. Accepts "top-left," bottom-left," "bottom-right," and "default"
       stickyLabels = true,                          // "Sticky" labels 
-      analyticsEnabled = false,                     // Enables Google Analytics 4 measurement of site usage
+      analyticsEnabled = true,                     // Enables Google Analytics 4 measurement of site usage
       extraEnabled = true,                          // Enable extra features
       extraUploadEnabled = true,                    // Enable upload function
       extraEQEnabled = true,                        // Enable parametic eq function
       extraEQBands = 10,                            // Default EQ bands available
+      alt_augment = true,                           // Display augment card in phone list, e.g. review sore, shop link
       extraEQBandsMax = 20;                         // Max EQ bands available
 
 // Specify which targets to display
 const targets = [
-    { type:"Reference",  files:["Haruto 2024","Haruto 2021"] },
-    { type:"Neutral",    files:["KEMAR DF","IEF Neutral 2023","Etymotic"] },
-    { type:"Reviewer",   files:["Antdroid","Banbeucmas","HBB","Precogvision","Super Review 22","Timmy","VSG"] },
-    { type:"Preference", files:["Harman IE 2019v2","Harman IE 2017v2","AutoEQ","Rtings","Sonarworks"] }
+    // { type:"Reference",  files:["Haruto 2024","Haruto 2021"] },
+    {
+        type: "Δ",
+        files:[
+            "∆ 5128DF for 711 - 10dB Tilt",
+            "∆ JM-1 for 711 - 10dB Tilt",
+            "IEF Comp"
+        ]
+    },
+    { type:"Preference", files:["Harman IE 2019v2","Harman IE 2017v2","AutoEQ","Rtings","Sonarworks"] },
+    { type:"Neutral",    files:["IEF Neutral 2023","Etymotic"] },
+    { type:"Reviewer",   files:["HBB","Super Review 22","Timmy"] },
+
 ];
 
 // Haruto's Addons
@@ -48,18 +61,24 @@ const  preference_bounds_name = "Bounds",  // Preference bounds name
        preference_bounds_startup = false,              // If true, preference bounds are displayed on startup
        allowSquigDownload = false,                     // If true, allows download of measurement data
        PHONE_BOOK = "phone_book.json",                 // Path to phone book JSON file
-       default_y_scale = "40db",                       // Default Y scale; values: ["20db", "30db", "40db", "50db", "crin"]
-       default_DF_name = "KEMAR DF",                   // Default RAW DF name
+       default_y_scale = "crin",                       // Default Y scale; values: ["20db", "30db", "40db", "50db", "crin"]
+       default_DF_name = "∆ JM-1 for 711 - 10dB Tilt",                   // Default RAW DF name
        dfBaseline = true,                              // If true, DF is used as baseline when custom df tilt is on
-       default_bass_shelf = 8,                         // Default Custom DF bass shelf value
-       default_tilt = -0.8,                            // Default Custom DF tilt value
+       default_bass_shelf = 0,                         // Default Custom DF bass shelf value
+       default_tilt = 0,                            // Default Custom DF tilt value
        default_ear = 0,                                // Default Custom DF ear gain value
        default_treble = 0,                             // Default Custom DF treble gain value
-       tiltableTargets = ["KEMAR DF"],                 // Targets that are allowed to be tilted
-       compTargets = ["KEMAR DF"],                     // Targets that are allowed to be used for compensation
-       allowCreatorSupport = true;                     // Allow the creator to have a button top right to support them
+       tiltableTargets = [
+            "∆ 5128DF for 711 - 10dB Tilt",
+            "∆ JM-1 for 711 - 10dB Tilt",
+            "Harman IE 2019v2","Harman IE 2017v2","AutoEQ","Rtings","Sonarworks",
+            "IEF Neutral 2023","Etymotic",
+            "HBB","Super Review 22","Timmy","IEF Comp"
+       ],                 // Targets that are allowed to be tilted
+       compTargets = ["∆ 5128DF for 711 - 10dB Tilt", "∆ JM-1 for 711 - 10dB Tilt"],                     // Targets that are allowed to be used for compensation
+       allowCreatorSupport = false;                     // Allow the creator to have a button top right to support them
        allowLanguageSelector = true;                   // Add Language Selector on the top right of the page. If it's false, l10n feature will be disabled.
-       availableLanguages = ["en", "ko"];              // List of available language codes. When you are adding a new language, make sure to use ISO 639-1 Language Codes for auto-detection.
+       availableLanguages = ["en", "he" , "ko"];              // List of available language codes. When you are adding a new language, make sure to use ISO 639-1 Language Codes for auto-detection.
        defaultLanguage = "en";                         // Determine default (fallback) language. It should be included in the availableLanguages list.
        useBrowserLangAsDefault = true;                 // If true, the browser's language will be used as the default language. If false, the defaultLanguage setting will be used as the default.
        translateHeader = true;                         // If true, translated header link from language files will be used over the one from config.js
@@ -92,22 +111,32 @@ function watermark(svg) {
     
     if ( watermark_image_url ) {
         wm.append("image")
-            .attrs({id:'logo', x:-64, y:-64, width:128, height:128, "xlink:href":watermark_image_url, "class":"graph_logo"});
+            .attrs({x:-64, y:-64, width:128, height:128, "xlink:href":watermark_image_url});
+    }
+    
+    if ( rig_description ) {
+        wm.append("text")
+            .attrs({x:380, y:-134, "font-size":8, "text-anchor":"end", "class":"rig-description"})
+            .text("Measured on: " + rig_description);
     }
     
     if ( watermark_text ) {
         wm.append("text")
-            .attrs({id:'wtext', x:0, y:80, "font-size":28, "text-anchor":"middle", "class":"graph-name"})
+            .attrs({x:0, y:70, "font-size":28, "text-anchor":"middle", "class":"graph-name"})
             .text(watermark_text);
     }
-
-    // Extra flair
-    svg.append("g")
-        .attr("opacity",0.2)
-        .append("text")
-        .attrs({x:765, y:314, "font-size":10, "text-anchor":"end", "class":"site_name"})
-        .text("graphtool.harutohiroki.com");
+    
+    let wmSq = svg.append("g")
+        .attr("opacity",0.2);
+    
+    wmSq.append("image")
+        .attrs({x:652, y:254, width:100, height:94, "class":"wm-squiglink-logo", "xlink:href":"squiglink-giggle.svg"});
+    
+    wmSq.append("text")
+        .attrs({x:641, y:314, "font-size":10, "transform":"translate(0,0)", "text-anchor":"end", "class":"wm-squiglink-address"})
+        .text("squig.link/lab/avishai");
 }
+
 
 
 
@@ -150,7 +179,7 @@ setLayout();
 const 
     // Short text, center-aligned, useful for a little side info, credits, links to measurement setup, etc. 
     simpleAbout = `
-        <p class="center">This graph database is maintained by HarutoHiroki with frequency responses generated via an "IEC60318-4"-compliant ear simulator. This web software is based on a heavily modified version of the <a href="https://github.com/mlochbaum/CrinGraph">CrinGraph</a> open source software project, with <a href="https://www.teachmeaudio.com/mixing/techniques/audio-spectrum">Audio Spectrum</a>'s definition source.</p>
+        <p class="center">This graph database is maintained by Avishai with frequency responses generated via an "IEC60318-4"-compliant ear simulator. This web software is based on a heavily modified version of the <a href="https://github.com/mlochbaum/CrinGraph">CrinGraph</a> open source software project, that was modifed by HarutoHiroki, with <a href="https://www.teachmeaudio.com/mixing/techniques/audio-spectrum">Audio Spectrum</a>'s definition source.</p>
     `
     ;
     // Which of the above variables to actually insert into the page
@@ -241,7 +270,7 @@ function setupGraphAnalytics() {
     if ( analyticsEnabled ) {
         const pageHead = document.querySelector("head"),
               graphAnalytics = document.createElement("script"),
-              graphAnalyticsSrc = "graphAnalytics.js";
+              graphAnalyticsSrc = "assets/js/graphAnalytics.js";
         
         graphAnalytics.setAttribute("src", graphAnalyticsSrc);
         pageHead.append(graphAnalytics);
@@ -252,29 +281,29 @@ setupGraphAnalytics();
 
 
 // If alt_header is enabled, these are the items added to the header
-let headerLogoText = "HarutoHiroki",
-    headerLogoImgUrl = "assets/images/haruto.svg",
+let headerLogoText = "Avishai's Squig.link",
+    headerLogoImgUrl = "assets/images/my_logo.svg",
     headerLinks = [
-    {
-        name: "Home",
-        url: "https://harutohiroki.com"
-    },
-    {
-        name: "Ranking",
-        url: "https://docs.google.com/spreadsheets/d/1DZTac1BxCLdmS2J4DDQyvKSVUZGnNhz2r86qMGcs_Jo/edit?pli=1#gid=330037169"
-    },
-    {
-        name: "Discord",
-        url: "https://discord.harutohiroki.com"
-    },
-//  {
-//      name: "Donate",
-//      url: "https://ko-fi.com/harutohiroki"
-//  },
-    {
-        name: "GitHub",
-        url: "https://github.com/HarutoHiroki"
-    },
+//     {
+//         name: "Home",
+//         url: ""
+//     },
+//     {
+//         name: "Ranking",
+//         url: ""
+//     },
+//     {
+//         name: "Discord",
+//         url: ""
+//     },
+// //  {
+// //      name: "Donate",
+// //      url: ""
+// //  },
+//     {
+//         name: "GitHub",
+//         url: ""
+//     },
 ];
 let whichHeaderLogoTextToUse = headerLogoText;
 let whichHeaderLogoImgUrlToUse = headerLogoImgUrl;

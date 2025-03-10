@@ -3,21 +3,20 @@
 <html>
     <head>
         <!-- Meta Data -->
-        <title>Haruto's Graph Tool</title>
-        <meta property="og:site_name" content="graphtool.harutohiroki.com"/>
-        <meta property="og:title" content="Haruto's Graph Tool" />
-        <meta property="og:url" content="https://graphtool.harutohiroki.com/"/>
-        <meta property="og:type" content="website"/>
-        <meta property="og:image" content="/assets/images/cropped.png"/>
-        <meta property="og:description" content="View and compare frequency response graphs for earphones."/>
-        <meta property="og:locale" content="en_US" />
-        <meta content="Haruto's Graph Tool" name="description" />
+        <title>Squiglink - IEM frequency response database by avishai</title>        
+        <link rel="canonical" href="https://squig.link/"/>
+        <meta name="description" content="Compare hundreds of frequency response graphs between IEMs and earphones from manufacturers like Moondrop, Sony, 64 Audio, Fiio, and more."/>
         
-        <link rel="icon" type="image/x-icon" href="assets/images/transparent.png"> 
-        <link rel="icon" type="image/png" href="assets/images/transparent.png"> 
+        <meta property="og:title" content="Squiglink - IEM frequency response database by avishai"/>
+        <meta property="og:description" content="Compare hundreds of frequency response graphs between IEMs and earphones from manufacturers like Moondrop, Sony, 64 Audio, Fiio, and more."/>
+        <meta property="og:type" content="website"/>
+        <meta property="og:url" content="https://squig.link/"/>
+        <meta property="og:image" content="https://squig.link/og-thumb_squiglink.jpg"/>
+        
+        <link rel="shortcut icon" type="image/png" href="https://squig.link/squigsite-favicon.svg"/>
+        <!-- <link rel="icon" type="image/png" href="assets/images/transparent.png">  -->
         <meta name="revisit-after" content="2 days">
-        <meta name="keywords" content="HarutoHiroki, Twitter, Developer, Github, Discord, IEMs, In Ear Monitors, Headphones">
-        <link rel="canonical" href="https://graphtool.harutohiroki.com/"/>
+        <meta name="keywords" content="Twitter, Developer, Github, Discord, IEMs, In Ear Monitors, Headphones">
         <meta name="theme-color" content="#00FFD9">
         
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes"/>
@@ -38,16 +37,19 @@
         <div class="graphtool">
             <noscript>Turn on Javascript</noscript>
         </div>
+        
         <script src="assets/js/d3.v5.min.js"></script>
         <script src="assets/js/d3-selection-multi.v1.min.js"></script>
         <script src="assets/js/fuse.min.js"></script>
         <script src="assets/js/reinvented-color-wheel.min.js"></script>
+        <script src="assets/js/listAugment.js"></script>
         <script src="assets/js/config.js"></script>
         <script src="assets/js/translate.js"></script>
         <script src="assets/js/equalizer.js"></script>
         <script src="assets/js/saveSvgAsPng.js"></script>
         <script src="assets/js/graphtool.js"></script>
         <script src="assets/js/90inclusion.js"></script>
+        <script src="https://squig.link/squigsites.js" ></script>
         <audio id="pinkNoiseAudio" preload="auto" loop>
             <source src="assets/audio/pinknoise.wav" type="audio/wav">
         </audio>
